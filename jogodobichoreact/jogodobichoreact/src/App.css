@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 5px;
+    color: black;
+    background: burlywood;
+    border: 2px solid #111;
+    margin: 20px;
+    outline: 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+button:disabled {
+    opacity: 0.5;
+    cursor:default;
+}
+
+.animais {
+    width: 100%;
+    height: 100%;
+}
+
+.animal-rewrapper {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.animais-wrapper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.animal {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    transition: 0.5s;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.animal:nth-child(1){
+    opacity: 1;
+}
+
+.animal-aparece {
+    opacity: 1;
+}
+
+.animal-image {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    top:0;
+    left: 0;
+    overflow: hidden;
+}
+
+.animal img {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid chocolate;
+}
+
+.title-animal {
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+    line-height: 30px;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

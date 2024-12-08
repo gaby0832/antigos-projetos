@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs') %>
+
+<section class="perguntas">
+	
+	<div class="container">
+
+		<h2><%= pergunta.titulo %></h2>
+		<p><%= pergunta.descricao %></p>
+		<br>
+
+		<hr>
+
+	<form method="POST" action="/responder">
+		<h3>Resposta</h3>
+		<label for="res">Resposta:</label>
+	    <textarea id="res" class="form-control" name="corpo"></textarea><br>
+	    <input type="hidden" name="perguntaId" value="<%= pergunta.id %>">
+	    <button type="submit" class="btn btn-primary">Responder</button> 
+	</form>
+
+	<hr>
+
+	<h3>Respostas:</h3>
+
+	<hr>
+
+	<% if(respostas.length == 0) { %>
+		<p>Não foi feita nenhuma resposta</p>	
+	<% } else { %>
+	<% respostas.forEach((resposta)=>{ %>
+
+		<div class="card">
+			<div class="card-body">
+			<p><%= resposta.corpo %></p>
+			</div>
+		</div>
+		<br>
+	<% }) %>
+	<% } %>
+	</div>
+
+</section>
+
+
+<%- include('partials/footer.ejs') %>

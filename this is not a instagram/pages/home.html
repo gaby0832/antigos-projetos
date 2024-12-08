@@ -1,0 +1,136 @@
+
+    <%- include('partials/header.html') %>
+
+        <section class="user-main">
+            <div class="container">
+                <div class="row">
+                    <div class="postagens col-md-8">
+                        <div class="row">
+                            <% for (let i = 0; i < posts.length; i++) { %>
+                             <% if (posts[i].userautor == name) { %>  
+                            <div class="posts bg-light">  
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <div class="feed-name-you">
+                                        
+                                        <a class="feed-perfil-you" href="/user/<%= posts[i].userautor %>">
+                                        <img src="<%= posts[i].autorimage %>" alt="mdo" width="32" height="32" class="rounded-circle">
+                                            <p><%= posts[i].userautor %></p>
+                                        </a>
+                                        <div class="modal-btn">
+                                            <button type="button"  class="align-middle" data-bs-toggle="modal" data-bs-target="#<%= posts[i].userautor %>Modal"><i class="fa-solid fa-ellipsis"></i></button>
+                                        </div>
+                                        </div>
+                                    </div>
+                    
+
+<!-- Modal -->
+<div class="modal fade" id="<%= posts[i].userautor %>Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sua Postagem</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding:0 !important;">
+        <div class="row" style="padding: 0 !important;">
+            <a href="/user/<%= posts[i].userautor %>" class="link-modal col-md-12">
+                Visitar Perfil
+            </a>
+            <a class="link-modal col-md-12" style="color:
+            red;" href="/apagar/<%= posts[i].userautor %>/<%= posts[i].id %>">Apagar Postagem <i class="fa-solid fa-trash"></i></a> 
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+                                <div class="post-image col-md-12">
+                                    <img src="<%= posts[i].imagemautor %>">
+                                    
+                                    <p><%= posts[i].titulo %></p>
+                                
+                                </div>
+                            </div>
+                            </div> 
+                              <% } else{%>
+                            <div class="posts bg-light">  
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <div class="feed-name-you">
+                                        
+                                        <a class="feed-perfil-you" href="/user/<%= posts[i].userautor %>">
+                                        <img src="<%= posts[i].autorimage %>" alt="mdo" width="32" height="32" class="rounded-circle">
+                                            <p><%= posts[i].userautor %></p>
+                                        </a>
+                                        <div class="modal-btn">
+                                            <button type="button"  class="align-middle" data-bs-toggle="modal" data-bs-target="#<%= posts[i].userautor %>Modal"><i class="fa-solid fa-ellipsis"></i></button>
+                                        </div>
+                                        </div>
+                                    </div>
+                    
+
+<!-- Modal -->
+<div class="modal fade" id="<%= posts[i].userautor %>Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Postagem de <%= posts[i].userautor %></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding:0 !important;">
+        <div class="row" style="padding: 0 !important;">
+            <a href="/user/<%= posts[i].userautor %>" class="link-modal col-md-12">
+                Visitar Perfil
+            </a>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+                                <div class="post-image col-md-12">
+                                    <img src="<%= posts[i].imagemautor %>">
+                                    
+                                    <p><%= posts[i].titulo %></p>
+                                
+                                </div>
+                            </div>
+                            </div> 
+                               <% } %> 
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="usuarios col-md-4">
+                      <div class="row">
+                        <div class="title-users col-md-12">
+                          <p>Usuarios que Utilizam o This is Not A Instagram</p>
+                        </div>
+                         <div class="wrapper-perfil col-md-12 style="overflow-y: auto;overflow-x: hidden">    
+                    <% for (let i = 0; i < users.length;i++) { %>
+                        <div class="perfil-you col-md-12">
+                          <img src="<%= users[i].imagem %>" alt="mdo" width="50" height="50" class="rounded-circle">
+                            <div class="name-you">
+                                    <a style="text-decoration: none;color: black;" href="/user/<%= users[i].nome %>"><h4><%= users[i].nome %></h4></a>
+                                </div>
+                        </div>
+                    <% } %>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <%- include('partials/footer.html') %>
+
+
+
+</body>
+</html>

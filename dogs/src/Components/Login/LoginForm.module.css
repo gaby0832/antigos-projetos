@@ -1,0 +1,56 @@
+.perdeu {
+    display: inline-block;
+    padding: 0.5rem 0;
+    line-height: 1;
+    color: #666;
+}
+
+.perdeu::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color:#666;
+}
+
+.cadastro {
+    margin-top: 4rem;
+}
+
+.subtitle {
+    font-family: var(--type-second);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.subtitle::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 0.5rem;
+    background: #ddd;
+    border-radius: 0.2rem;
+}
+
+.cadastro p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 40rem) {
+    
+    
+    .perdeu {
+        color: white;
+    }
+
+    .perdeu::after {
+        background-color: white;
+    }
+
+    .cadastro p {
+        color: white;
+    }
+}
+
+

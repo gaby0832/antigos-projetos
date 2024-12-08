@@ -1,0 +1,24 @@
+body {
+	background-color: #eceff1;
+}
+
+.navbar {
+	padding-left:20px;
+	padding-right: 20px;
+}
+
+.form-pergunta {
+	margin-top: 5vh;
+}
+
+.perguntas {
+	margin-top: 5vh;
+}
+
+.pergunta-header a {
+	margin: 10px 0;
+}
+
+.perguntas .card {
+	margin-top: 40px;
+}

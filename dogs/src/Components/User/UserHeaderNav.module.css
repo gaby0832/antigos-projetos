@@ -1,0 +1,134 @@
+.nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.nav a,
+.nav button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: .2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px solid transparent;
+    background: #eee;
+    transform: 0.12s;
+    cursor: pointer;
+}
+
+.nav a:hover,
+.nav button:hover {
+    background: white;
+    border-color: #333;
+    box-shadow: 0 0 0 3px #eee;
+    outline: none;
+}
+
+.menuButton {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    border-radius: .2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px solid transparent;
+    background: #eee;
+    transform: 0.12s;
+    cursor: pointer;
+}
+
+.menuButton::after {
+    content: '';
+    width: 1.2rem;
+    height: 2px;
+    transition: 0.2s;
+    border-radius: 2.2rem;
+    display: block;
+    background: currentColor;
+    box-shadow: 0 6px currentColor, 0 -6px currentColor;
+}
+
+
+.menuButton:hover,
+.menuButton:focus,
+.activeMenuButton {
+    background: white;
+    outline: 0;
+    box-shadow: 0 0 0 3px #fea;
+    border-color: #fb1;
+    color: #fb1;
+} 
+
+.activeMenuButton {
+    background: white;
+    outline: 0;
+    box-shadow: 0 0 0 3px #fea;
+    border-color: #fb1;
+    color: #fb1;
+}
+
+.activeMenuButton::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 2.2rem;
+    transition: 0.2s;
+    display: block;
+    background: currentColor;
+    box-shadow: 0 8px currentColor, 0 -8px currentColor;
+    transform: rotate(90deg);
+}
+
+
+.mobileNav {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    border-radius: .2rem;
+    transform: translateX(-10px);
+    transition: 0.2s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobileNav a,
+.mobileNav button {
+    display: flex;
+    align-items: center;
+    background: none;
+    width: 100%;
+    border: none;
+    border-radius: .2rem;
+    border-bottom: 1px solid #eee;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.mobileNav a:hover svg > *,
+.mobileNav button:hover svg > * {
+    fill: #fb1;
+}
+
+.mobileNav button {
+    border-bottom: none;
+}
+
+.mobileNav svg {
+    margin-right: 0.5rem;
+}
+
+.mobileNavActive {
+    transform: initial;
+    opacity: 1;
+    z-index: 100;
+    pointer-events: initial;
+}

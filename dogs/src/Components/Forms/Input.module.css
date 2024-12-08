@@ -1,0 +1,55 @@
+.wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input {
+    border: 1px solid #eee;
+    display: block;
+    width: 100%;
+    padding: .8rem;
+    font-size: 1rem;
+    border-radius: .4rem;
+    background: #eee;
+    transition: 0.2s;
+}
+
+.input:hover,
+.input:focus {
+    outline: 0;
+    background: white;
+    border-color: #fb1;
+    box-shadow: 0 0 0 3px #fea;
+}
+
+.label {
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    padding-bottom: 0.5rem;
+}
+
+.error {
+    color: #f31;
+    font-size: 0.8751rem;
+}
+
+.gridInput {
+    position: relative;
+    display: flex;
+    gap: 2px;
+}
+
+.show {   
+    position: absolute;
+    right: 0;
+    padding: .8rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.show svg {
+    width: 20px;
+    height: 20px;
+}

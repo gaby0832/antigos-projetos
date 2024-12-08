@@ -1,0 +1,572 @@
+* {
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+.images {
+  margin: 0 !important;
+  background-image: url('./images/bg-main-desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;  flex-direction: column;
+}
+
+.images .card-front {
+  
+  margin: 0 !important;
+  padding: 20px !important;
+  width: 400px;
+  height: 245px;
+  margin-left: 60px !important;
+  border-radius: 7px;
+  background-image: url('./images/bg-card-front.png');
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-repeat: no-repeat;
+}
+
+.card-front .circles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0 !important;
+}
+
+.circle-one {
+  display: inline-flex;
+  width: 50px;
+  border-radius: 100px;
+  height: 50px;
+  background-color: white;
+}
+
+.circle-two {
+  display: inline-flex;
+  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.card-front .wrapper-card-front {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.card-front .cardnumber{
+  width: 100%;
+  text-align: left;
+  font-size: 25px;
+}
+
+.card-front .name-and-mmvv {
+  padding: 10px 0 !important;
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.images .card-back {
+  
+  margin-left: 100px !important;
+  width: 400px;
+  height: 245px;
+  border-radius: 7px;background-image: url('./images/bg-card-back.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  padding: 0 45px !important;
+}
+
+.cvc {
+  padding-bottom: 5px !important;
+  color: white;
+}
+
+
+.formulario {
+  padding: 0 20% !important;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card-label {
+  font-size: 10px;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+}
+
+
+.form-control {
+  padding: 8px !important;
+  width: 100%;
+  transition: 0.2s border-color ease-in-out;
+  border-color: hsl(270, 3%, 87%);
+}
+
+
+.form-control::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+
+.form-control:focus {
+  outline: 0 !important;
+  border-color:  hsl(278, 68%, 11%);
+  box-shadow: none;
+}
+
+.verify-form {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.verify-form label {
+  word-break: keep-all;
+  font-size: 10px;
+  padding: 4px 0 !important;
+}
+
+.alert {
+  display: inline-flex;
+  width: 100%;
+  padding: 0 !important;
+}
+
+.verify-form-2 {
+  display: flex;
+  gap: 3px;
+}
+
+.verify-form-2 input {
+  width: 100%;
+}
+
+.form-verify {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.verify-col {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  align-content: flex-start;
+  justify-content: flex-end;
+  padding: 0 !important;
+}
+
+.carregando-on {
+  z-index: 1001;
+  background-color: white;
+  position: fixed !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.carregando-off {
+  display: none;
+}
+
+
+.carregando-on i {
+  padding: 20px !important;
+  font-size: 60px;
+  background-color: transparent !important;
+  color: black ;
+}
+
+
+.cardbutton {
+  
+  margin-top: 20px !important;
+  padding: 8px !important;
+  width: 100%;
+  background-color:  hsl(278, 68%, 11%);
+  color: white;
+  outline: 0;
+  border:0;
+  border-radius: 7px;
+}
+
+
+.modal-info {
+  z-index: 999;
+  position: fixed;
+  padding: 0 2% !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(42, 42, 42, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+
+  padding: 20px 2% !important;
+  background-color: white;
+  border-radius: 4px;
+
+}
+
+.confirm-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.circle-confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon {
+  transition: 0.5s ease-in-out;
+}
+
+.confirm {
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.confirm-off i, .confirm-on i {
+  font-size: 50px;
+  color: white;
+}
+
+.icon-false {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: rgb(192, 190, 190);
+}
+
+
+.icon-true {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background-color: hsl(278, 68%, 11%);
+}
+
+.transition-title {
+  text-align: center;
+}
+
+.spinning {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.transition-title p {
+  padding: 5px 0 !important;
+  text-align: center;
+  color: hsl(0, 0%, 75%);
+}
+
+.confirm-off {
+  display: none;
+}
+
+.form-card {
+  position: relative;
+}
+
+.modal-titulo {
+  width: 100%;
+}
+
+.modal-titulo h2 {
+  padding: 5px 0 !important;
+  font-weight: bold;
+}
+
+.modal-desc p {
+  padding: 20px 0 !important;
+  font-weight: bold;
+}
+
+.modal-info button {
+  padding: 7px 20px !important;
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+
+
+@media screen and (max-width: 1150px) {
+  .images .card-front {
+    margin-left: 10px !important;
+  }
+  
+  .images .card-back {
+    margin-left: 50px !important;
+  }
+
+
+  .formulario {
+    padding: 0  !important;
+    padding-right: 150px !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+
+
+  .form {
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content:flex-end;
+    min-height: 100vh;
+  }
+
+  .form-card {
+    width: 50%;
+  }
+
+  .form-control {
+    padding: 8px !important;
+    width: 100%;
+    transition: 0.2s border-color ease-in-out;
+    border-color: hsl(270, 3%, 87%);
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .images .card-front {
+    margin-left: 10px !important;
+  }
+  
+  .images .card-back {
+    margin-left: 20px !important;
+  }
+
+  .form-card {
+    width: 50%;
+  }
+
+  
+  .formulario {
+    padding: 0 !important;
+    padding-right: 50px !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .form {
+    max-width: 5000px !important;
+    min-width: 100%;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content:flex-end;
+    min-height: 100vh;
+  }
+
+}
+
+
+@media screen and (max-width: 960px) {
+
+  .formulario {
+    padding: 0 50px !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+
+
+  .form {
+    padding: 20px 0 !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content:flex-end;
+    min-height: 100vh;
+  }
+
+  .form-card {
+    width: 50%;
+  }
+
+  .form-control {
+    padding: 8px !important;
+    width: 100%;
+    transition: 0.2s border-color ease-in-out;
+    border-color: hsl(270, 3%, 87%);
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .images {
+    margin: 0 !important;
+    background-image: url('./images/bg-main-desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    display: flex;
+    justify-content: center;  flex-direction: column-reverse;
+  }
+
+  .images .card-front {
+    margin-bottom: -50px !important;
+    margin-left: -50px !important;
+  }
+  
+  .images .card-back {
+    margin-bottom: -100px !important;
+    margin-left: 0 !important;
+  }
+
+  .formulario {
+    padding: 50px 0 !important;
+    padding-right: 0 !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: auto !important;
+    min-height: 300px !important;
+  }
+  
+
+
+  .form {
+    max-width: 5000px !important;
+    min-width: 100%;
+    padding: 20px 0 !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content:center;
+    min-height: auto;
+  }
+
+  .form-card {
+    width: 70%;
+  }
+
+  .form-control {
+    padding: 8px !important;
+    width: 100%;
+    transition: 0.2s border-color ease-in-out;
+    border-color: hsl(270, 3%, 87%);
+  }
+}
+
+
+@media screen and (max-width: 415px)  {
+  
+  .images .card-front {
+    z-index: 400;
+    transform: scale(0.8);
+  }
+
+  .form-card {
+    padding: 0 4% !important;
+    width: 100%;
+  }
+  
+  .images .card-back {
+    transform: scale(0.8);
+  }
+
+  .form-control {
+    padding: 10px 2% !important;
+    width: 100%;
+    transition: 0.2s border-color ease-in-out;
+    border-color: hsl(270, 3%, 87%);
+  }
+  
+  .cardbutton {
+    
+    margin-top: 20px !important;
+    padding: 10px !important;
+    width: 100%;
+    background-color:  hsl(278, 68%, 11%);
+    color: white;
+    outline: 0;
+    border:0;
+    border-radius: 7px;
+  }
+}
+
+

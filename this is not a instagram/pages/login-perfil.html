@@ -1,0 +1,26 @@
+  <%- include('partials/login-header.html') %>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Faça login aqui!</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form  id="login-form"  method="post">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  required="">
+                            <div id="emailHelp" class="form-text">Nunca compartilhe seu E-mail para ninguém</div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Fazer login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.loginForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    min-height: 100vh;
+    align-content: center;
+}
+
+.backgroundImg {
+    display: block;
+    background-image: url('../../Assets/login.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.forms {
+    max-width: 30rem;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.centered {
+    margin-top: -4rem;
+    width: 100%;
+}
+
+.forms form {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+
+@media screen and (max-width: 40rem){
+    .loginForm {
+        grid-template-columns: 1fr;    
+        background-image: url('../../Assets/login.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .backgroundImg {
+        display: none;
+    }
+
+    .forms {
+        background: #1111116c;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .forms h1 {
+        color: white;
+    }
+
+    .forms label {
+        color: white;
+    }
+
+}

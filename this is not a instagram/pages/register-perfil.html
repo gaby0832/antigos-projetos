@@ -1,0 +1,41 @@
+  <%- include('partials/register-header.html') %>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <h3 class="text-center text-white">Cadastre-se</h3>
+                        <form  id="login-form"  method="post">
+                          <div class="mb-3">
+                            <label for="username_register" class="form-label">Nome:</label>
+                            <input type="text" name="usernameregister"  required class="form-control" id="username_register">
+                          </div>
+                          <div class="mb-3">
+                            <label for="username_register" class="form-label">Nickname:</label>
+                            <input type="text" name="nicknameregister" id="username_register" class="form-control">
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="imagem_register" class="form-label">Url da imagem do seu perfil:</label>
+                            <input type="text" name="imagemregister" id="imagem_register" class="form-control" />
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="email_register" class="form-label">Email: </label>
+                            <input type="email" name="emailregister" id="email_register"  class="form-control">
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="password_register" class="form-label">Senha: </label>
+                            <input type="password" name="passwordregister" id="password_register" class="form-control">
+                          </div>
+
+                          <button type="submit" class="btn btn-primary">Se cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

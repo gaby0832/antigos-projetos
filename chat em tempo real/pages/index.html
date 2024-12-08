@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/public/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="online-person"></div>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" /><button>Send</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+
+  let nome = prompt('Qual seu nome?');
+
+  socket.emit('new user',nome);
+
+  socket.on('new user', (data)=>{
+    if(data.success){
+      alert('Bem-vindo(a) '+nome);
+      socket.on('add user', (name)=>{
+        name.map((val)=>{
+          document.querySelector('.online-person').innerHTML = "<h5>"+val+" Entrou na sala!</h5>";
+        })
+      })
+    }else{
+      alert('Usuario já existente, por favor use outro nome...');
+      window.location.href = "/";
+    }
+  })
+
+  var messages = document.getElementById('messages');
+  var form = document.getElementById('form');
+  var input = document.getElementById('input');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (input.value) {
+      socket.emit('chat message', {msg:input.value,nome:nome});
+      input.value = '';
+    }
+  });
+
+  socket.on('chat message', function(obj) {
+    if(obj.nome == nome){
+      var item = document.createElement('li');
+      item.innerHTML = 'Você: '+obj.msg;
+      item.style = "background-color:gray;";
+      messages.appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight);
+    }else{
+      const rgb = (Math.random() * (999 - 100) + 100).toFixed();
+      var item = document.createElement('li');
+      var corName = document.createElement('h3')
+      item.style = "display:flex;align-items:center;";
+      corName.textContent = obj.nome;
+      corName.style = "color:#"+rgb+";";
+      item.appendChild(corName);
+      item.innerHTML += ': '+obj.msg;
+      messages.appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  });
+</script>
+  </body>
+</html>

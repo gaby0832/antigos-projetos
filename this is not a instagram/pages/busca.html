@@ -1,0 +1,23 @@
+
+    <%- include('partials/header.html') %>
+
+       <div class="feed-busca">
+                <div class="user-busca">
+                    <div class="wrapper-perfil" style="overflow-y: auto;overflow-x: hidden">    
+                    <% for (let i = 0; i < users.length;i++) { %>
+                        <div class="perfil-you">
+                            <div class="image-you" style='background-image: url("<%= users[i].imagem %>");'></div>
+                                <div class="name-you">
+                                    <a style="text-decoration: none;color: black;" href="/user/<%= users[i].nome %>"><h2><%= users[i].nome %></h2></a>
+                                </div>
+                        </div>
+                    <% } %>
+                    </div>
+                </div>
+       </div>
+   
+
+    <%- include('partials/footer.html') %>
+
+</body>
+</html>
